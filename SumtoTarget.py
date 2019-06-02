@@ -1,22 +1,19 @@
-class Solution(object):
-    def __init__(self):
-        self.output=[];
-        
-    
-    def twoSum(self, nums, target):
-        for i in range(len(nums)-1):
-            for j in range(i+1,len(nums)):
-                sum=nums[i]+nums[j];
-                if (sum==target):
-                    self.out(i,j);
-                    return self.output;
-             
-    def out(self,i,j):
-        self.output.insert(0,i);
-        self.output.insert(1,j);
-    
-      
-    
-obj=Solution();
-print(obj.twoSum([2,5,5,11],10));
+def twoSum(nums, target):
+  num=sorted(nums)
+  bol=False
+  for i in range(len(nums)-1,0,-1):
+    for j in range(len(nums)-2,-1,-1):
+      sum=num[i]+num[j];
+      if (sum==target):
+        bol=True
+        return nums.index(num[j]),nums.index(num[i])
+  if bol==False:
+    return "No pairs"
+       
+  
+
+print twoSum([60,40,10,20,90],100)
+
+
+
         
