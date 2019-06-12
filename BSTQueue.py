@@ -7,17 +7,15 @@ class Node(object):
 
 def printLevelOrder(root):
   Q=[]
-  temp_node=root
-  while temp_node:
-   print temp_node.key,
-   if (temp_node.left):
-    Q.append(temp_node.left)
-   if (temp_node.right):
-    Q.append(temp_node.right)
-   if Q!=[]:
-    temp_node=Q.pop(0)
-   else:
-    temp_node=None
+  Q.append(root)
+  while Q!=[]:
+   print Q[0].key,
+   if (Q[0].left):
+    Q.append(Q[0].left)
+   if (Q[0].right):
+    Q.append(Q[0].right)
+   Q.pop(0)
+   
     
    
 
