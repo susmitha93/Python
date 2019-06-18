@@ -21,7 +21,7 @@ class Solution():
         spt[src]=True
         for i in range(self.V):
             u=self._Getminimum(dist,spt,min)
-            spt[u]=True
+            
 
             for v in range(self.V):
                 if matrix[u][v]>0 and spt[v]==False:
