@@ -15,7 +15,7 @@ def validate(count):
     minallothers=min(count['B'],count['A'],count['N'])
     if minlomoves<minallothers:
         return minlomoves
-    elif minlomoves<minallothers:
+    elif minlomoves>minallothers:
         return minallothers
     else:
         return minallothers
